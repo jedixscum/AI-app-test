@@ -20,7 +20,7 @@ proot-distro install ubuntu
 
 echo "Verifying Ubuntu installation..."
 "$PREFIX/bin/bash" -c '
-    test -d "$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
+    test -d "$PREFIX/var/lib/proot-distro/containers/ubuntu/rootfs"
 ' || {
     echo "Installation finished, but Ubuntu rootfs was not found."
     proot-distro list || true
