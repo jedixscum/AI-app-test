@@ -10,7 +10,7 @@ if ! command -v proot-distro >/dev/null 2>&1; then
     exit 1
 fi
 
-ROOTFS="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
+ROOTFS="$PREFIX/var/lib/proot-distro/containers/ubuntu/rootfs"
 
 if [ ! -d "$ROOTFS" ]; then
     echo "Ubuntu rootfs not found at: $ROOTFS"
