@@ -100,7 +100,7 @@ object TermuxDetector {
     private fun installedFromPlayStore(context: Context): Boolean = try {
         if (Build.VERSION.SDK_INT >= 30) {
             context.packageManager.getInstallSourceInfo(TermuxConstants.PACKAGE)
-                .installingPackage == "com.android.vending"
+                .installingPackageName == "com.android.vending"
         } else {
             @Suppress("DEPRECATION")
             context.packageManager.getInstallerPackageName(TermuxConstants.PACKAGE) == "com.android.vending"
